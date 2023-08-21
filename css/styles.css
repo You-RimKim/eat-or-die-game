@@ -1,1 +1,73 @@
-// test
+@font-face {font-family: Minecraft; 
+    src: url('../css/Minecraft.ttf');} 
+h2{
+font-family: Minecraft;
+}
+
+html,
+body{
+    padding: 0;
+    text-align: center;
+}
+
+#background-video {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+  }
+
+#game-welcome {
+    padding: 20px 0px;
+}
+
+#game-instruction {
+    display: none;
+    padding: 20px 0px;
+}
+  
+#game-container {
+    display: flex;
+    display: none;
+    width: 100vw;
+    padding: 20px 0px;
+    justify-content: center;
+}
+  
+#game-screen {
+    display: none;
+    align-content: center;
+    padding: 20px 0px;
+    overflow: hidden;
+    position: relative;
+    background-image: url();
+    background-size: cover;
+    animation: slide 5s linear infinite;
+}
+
+#game-end {
+    display: none;
+}
+  
+.game-intro p {
+    font-size: 18px;
+    font-family: "Minecraft";
+}
+
+
+.eat-or-die-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 700; 
+    height: auto; 
+    z-index: 1;
+  }
+  
+  
+.arrows-img {
+    width: 100px;
+}

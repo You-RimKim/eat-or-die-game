@@ -10,7 +10,10 @@
     <main>
         <!-- game name + photos showing on welcome page -->
         <div id="game-welcome">
-            <img src="../img/eat-or-die-logo.png" alt="eat or die logo" class="logo-img"/>
+            <video autoplay muted loop id="background-video">
+                <source src="../img/background.mp4" type="video/mp4">
+              </video>         
+              <img src="../img/eat-or-die-logo.png" alt="eat or die logo" class="eat-or-die-logo"/>     
             <br />
         </div>
 
@@ -29,17 +32,18 @@
 
         <!-- welcome message + instructions how to play -->
         <div id="game-instruction">
-            <p>Welcome, foodie! You only have one task: Eat all the yummy food!</p>
-            <p>Use the arrows to stuff your belly.</p>
-            <img src="" alt="image of arrow keys" class="arrows-img"/>
+            <h3>Welcome, foodie! You only have one task: Eat all the yummy food!</h3>
+            <h3>Use the arrows to stuff your belly.</h3>
+            <img src="../img/keys.png" alt="image of arrow keys" class="arrows-img"/>
+            <br />
             <button id="start-button">Let's eat!</button>
         </div>
 
         <!-- game set up with displayed elements -->
         <div id="game-container">
             <div>
-                <h2>Score: <span id="score">0</span></h2>
-                <h2>Lives: <span id="lives">0</span></h2>
+                <h2>SCORE: <span id="score">0</span></h2>
+                <h2>LIVES: <span id="lives">0</span></h2>
             </div>
         
         <!-- game screen is hidden until button is being clicked -->
