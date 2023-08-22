@@ -8,30 +8,35 @@
 </head>
 <body>
     <main>
-
-       <!--<video autoplay muted loop id="background-video">
-            <source src="../img/background.mp4" type="video/mp4">
-          </video>-->
-
         <!-- game name + photos showing on welcome page -->
+
+        <div id="video-background">
+            <video autoplay muted loop id="pink-video">
+                <source src="../img/background.mp4" type="video/mp4">
+            </video>
+        </div>
         
-        <div id="game-welcome">       
-              <img src="../img/eat-or-die-logo.png" alt="eat or die logo" class="eat-or-die-logo"/> 
-            <br />
+        <div class="overlay-container">
+            <div id="game-welcome">
+                <img src="../img/eat-or-die-logo.png" alt="eat or die logo" class="eat-or-die-logo"/> 
+                <br />
+            </div>
         </div>
 
         <!-- welcome message + instructions how to play -->
-        <div id="game-instruction">
-            <h3>Welcome, foodie! You only have one task: Eat all the yummy food!</h3>
-            <h3>Use the arrows to stuff your belly.</h3>
-            <img src="../img/keys.png" alt="image of arrow keys" class="arrows-img"/>
-            <br />
-            <button id="start-button">Let's eat!</button>
+        <div class="overlay-container2"></div>
+            <div id="game-instruction">
+                <h3>Welcome, foodie! You only have one task: Eat all the yummy food!</h3>
+                <h3>Use the arrows to stuff your belly.</h3>
+                <img src="../img/keys.png" alt="image of arrow keys" class="arrows-img"/>
+                <br />
+                <button id="start-button">Let's eat!</button>
+            </div>
         </div>
 
         <div id="floating-foods">
-            <img src="../img/food/healthy/avocado_half.png" alt="avocado half" class="healthy-foods"/>
-            <img src="../img" alt="" class=""/>
+            <img src="" alt="" class=""/>
+            <img src="" alt="" class=""/>
             <img src="" alt="" class=""/>
             <img src="" alt="" class=""/>
             <img src="" alt="" class=""/>
@@ -55,15 +60,16 @@
 
         <!-- game end screen is hidden until game ends -->
         <div id="game-end">
-            <img src="" alt="end screen of game/game over" class="logo-img" />
-            <h1>You died</h1>
+            <img src="../img/game-over.png" alt="end screen of game/game over" class="game-over-img" />
             <br/>
             <button id="restart-button">Let's eat again</button>
         </div>
         
     </main>
     
+    <script type="text/javascript" src="../js/food.js"></script>
+    <script type="text/javascript" src="../js/nyancat.js"></script>
+    <script type="text/javascript" src="../js/game.js"></script>
     <script type="text/javascript" src="../js/script.js"></script>
-    
 </body>
 </html>
