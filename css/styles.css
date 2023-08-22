@@ -1,112 +1,131 @@
-@font-face {font-family: Minecraft; 
-    src: url('../css/Minecraft.ttf');} 
-h2{
-font-family: Minecraft;
-}
+/*@font-face {src: url("../css/PressStart2P-Regular.ttf");} */
 
-html
-body{
+body {
     padding: 0;
     text-align: center;
-}
-
-#video-background {
-    position: fixed;
+  }
+  
+  video {
+    display: block;
+    object-fit: fill;
+    position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
     height: 100%;
-    z-index: 0;
+    width: 100%;
   }
 
-.overlay-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-}
-
-#game-welcome {
-    text-align: center;
-}
-
-.overlay-container2 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-}
-
-#game-instruction {
-    /*display: none;*/
-   /* position: absolute;*/
+  #game-intro {
     padding: 20px 0px;
-}
+  }
   
-#game-container {
-    /*position: absolute;*/
+  #game-container {
     display: flex;
-    justify-content: center;
-    /*display: none;*/
     width: 100vw;
     padding: 20px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #game-container > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 20px;
+}
+
+  #game-container h2 {
+    font-family: "Verdana", sans-serif;
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+/* Style for the score and lives span elements */
+  #score, #lives {
+    font-weight: bold;
+    color:black;
 }
   
-#game-screen {
-    /*display: none;*/
-    justify-content: center;
+  #game-screen {
+    display: none;
+    align-content: center;
     padding: 20px 0px;
     overflow: hidden;
     position: relative;
     background-image: url();
     background-size: cover;
     animation: slide 5s linear infinite;
-}
-
-/*#game-end {
-    position: absolute;
+  }
+  
+  @keyframes slide {
+    0% {
+      background-position: 0 -1000px;
+    }
+    95% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 0 50px;
+    }
+  }
+  
+  #game-end {
     display: none;
-}*/
+    z-index: 1;
+  }
   
-/*.game-instruction h3 {
+  /*.overlay-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }*/
+
+  .video-background {
+    object-fit: fill;
+    width: 100%;
+    height: 100%;
     position: absolute;
-    font-size: 18px;
-    font-family: "Minecraft";
+    overflow: hidden;
     text-align: center;
-}*/
-
-
-.eat-or-die-logo {
-    /*position: absolute;*/
-    top: 50%;
-    left: 50%;
-    width: 50em; 
-    height: auto; 
-    z-index: 1;
-  }
-  
-  
-.arrows-img {
-    /*position: absolute;*/
-    width: 100px;
-}
-
-.game-over-logo {
-    /*position: absolute;*/
-    top: 50%;
-    left: 50%;
-    width: 50em; 
-    height: auto; 
-    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 0;
   }
 
+  .game-intro p {
+    font-size: 18px;
+    font-family: "Verdana";
+  }
+
+  .intro {
+    position: relative;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .eat-or-die-img {
+    width: 50em;
+  }
+  
+  .arrows-img {
+    width: 150px;
+  }
+  
+  body button {
+    font-size: 30px;
+    color: #870007;
+    padding: 20px 40px;
+    border: 0;
+    box-shadow: 0;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }

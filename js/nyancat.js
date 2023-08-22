@@ -1,64 +1,68 @@
-class Nyancat {
-    constructor(gameScreen, left, top, width, height, imgSrc) {
-        this.gameScreen = gameScreen;
-        this.left = left;
-        this.top = top;
-        this.width = width;
-        this.height = height;
-        this.directionX = 0;
-        this.directionY = 0;
-        this.element = document.createElement("img");
+class Player {
+  constructor(gameScreen, left, top, width, height, imgSrc) {
+    this.gameScreen = gameScreen;
+    this.left = left;
+    this.top = top;
+    this.width = width;
+    this.height = height;
+    this.directionX = 0;
+    this.directionY = 0;
+    this.speedX = 3;
+    this.speedY = 3;
+    this.element = document.createElement("img");
 
-        this.element.src = imgSrc;
-        this.element.style.position = "absolute";
-        this.element.style.width = `${width}px`;
-        this.element.style.height = `${height}px`;
-        this.element.style.left = `${left}px`;
-        this.element.style.top = `${top}px`;
+    this.element.src = imgSrc;
+    this.element.style.position = "absolute";
+    this.element.style.width = `${width}px`;
+    this.element.style.height = `${height}px`;
+    this.element.style.left = `${left}px`;
+    this.element.style.top = `${top}px`;
 
-        this.gameScreen.appendChild(this.element);
+    this.gameScreen.appendChild(this.element);
+  }
+
+  move() {
+    // Update player's car position based on directionX and directionY
+    this.left += this.directionX * this.speedX;
+    this.top += this.directionY * this.speedY;
+
+    // Ensure the player's car stays within the game screen
+    if (this.left < 10) {
+      this.left = 10;
+    }
+    if (this.top < 10) {
+      this.top = 10;
+    }
+    if (this.left > this.gameScreen.offsetWidth - this.width - 10) {
+      this.left = this.gameScreen.offsetWidth - this.width - 10;
+    }
+    if (this.top > this.gameScreen.offsetHeight - this.height - 10) {
+      this.top = this.gameScreen.offsetHeight - this.height - 10;
     }
 
-    move() {
-        this.left += this.directionX;
-        this.top += this.directionY;
+    // Update the player's car position on the screen
+    this.updatePosition();
+  }
 
-        if (this.left < 10) {
-            this.left = 10;
-          }
-          if (this.top < 10) {
-            this.top = 10;
-          }
-          if (this.left > this.gameScreen.offsetWidth - this.width - 10) {
-            this.left = this.gameScreen.offsetWidth - this.width - 10;
-          }
-          if (this.top > this.gameScreen.offsetHeight - this.height - 10) {
-            this.top = this.gameScreen.offsetHeight - this.height - 10;
-          }
-      
-          this.updatePosition();
+  didCollide(unhealthyFood) {
+    const playerRect = this.element.getBoundingClientRect();
+    const unhealthyFoodRect = unhealthyFood.element.getBoundingClientRect();
+
+    if (
+      playerRect.left < unhealthyFoodRect.right &&
+      playerRect.right > unhealthyFoodRect.left &&
+      playerRect.top < unhealthyFoodRect.bottom &&
+      playerRect.bottom > unhealthyFoodRect.top
+    ) {
+
+      return true;
+    } else {
+      return false;
     }
+  }
 
-    didCollide(unhealthyFood) {
-        const nyancatRect = this.element.getBoundingClientRect();
-        const unhealthyFoodRect = obstacle.element.getBoundingClientRect();
-    
-        if (
-            nyancatRect.left < unhealthyFoodRect.right &&
-            nyancatRect.right > unhealthyFoodRect.left &&
-            nyancatRect.top < unhealthyFoodRect.bottom &&
-            nyancatRect.bottom > unhealthyFoodRect.top
-        ) {
-    
-          return true;
-        } else {
-          return false;
-        }
-      }
-
-      updatePosition() {
-        this.element.style.left = `${this.left}px`;
-        this.element.style.top = `${this.top}px`;
-      }
-
+  updatePosition() {
+    this.element.style.left = `${this.left}px`;
+    this.element.style.top = `${this.top}px`;
+  }
 }
