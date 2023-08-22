@@ -10,35 +10,29 @@ body{
     text-align: center;
 }
 
-#background-video {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
-    object-fit: cover;
-  }
-
 #game-welcome {
     padding: 20px 0px;
+    text-align: center;
 }
 
 #game-instruction {
-    display: none;
+    /*display: none;*/
+   /* position: absolute;*/
     padding: 20px 0px;
 }
   
 #game-container {
+    position: absolute;
     display: flex;
-    display: none;
+    justify-content: center;
+    /*display: none;*/
     width: 100vw;
     padding: 20px 0px;
-    justify-content: center;
 }
   
 #game-screen {
-    display: none;
-    align-content: center;
+    /*display: none;*/
+    justify-content: center;
     padding: 20px 0px;
     overflow: hidden;
     position: relative;
@@ -47,14 +41,17 @@ body{
     animation: slide 5s linear infinite;
 }
 
-#game-end {
+/*#game-end {
+    position: absolute;
     display: none;
-}
+}*/
   
-.game-intro p {
+/*.game-instruction h3 {
+    position: absolute;
     font-size: 18px;
     font-family: "Minecraft";
-}
+    text-align: center;
+}*/
 
 
 .eat-or-die-logo {
@@ -62,12 +59,22 @@ body{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 700; 
+    width: 50em; 
     height: auto; 
     z-index: 1;
   }
   
   
 .arrows-img {
+    /*position: absolute;*/
     width: 100px;
 }
+
+/*#background-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+  }*/
