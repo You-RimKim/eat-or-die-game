@@ -38,3 +38,23 @@ function restartGame() {
     location.reload();
 }
 
+window.addEventListener("keydown", (event) => {
+  console.log(event.key);
+  event.preventDefault();
+  switch(event.key) {
+    case "ArrowLeft":
+      game.nyancat.directionX = -1;
+      break;
+    case "ArrowUp":
+      game.nyancat.directionY = -1;
+      break;
+    case "ArrowRight":
+      game.nyancat.directionX = 1;
+      break;
+    case "ArrowDown":
+      game.nyancat.directionY = 1;
+      break;
+  }
+});
+
+window.addEventListener("keydown", handleKeydown);
