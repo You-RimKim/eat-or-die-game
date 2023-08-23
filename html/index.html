@@ -9,25 +9,34 @@
   </head>
   <body>
     <main>
-      
+
         <div class="video-background">
             <video playsinline autoplay muted loop>
-                <source src="../img/background.mp4" type="video/mp4">
+                <source src="../resources/img/backgrounds/background.mp4" type="video/mp4">
             </video>
         </div>
-      
+
+        <div class="audio">
+            <button type="button" id="audio-button">
+                <img src="../resources/img/buttons/audio-button.png" alt="audio-button" id="audio-icon">
+            </button>
+            <audio id="background-music">
+                <source src="../resources/sounds/cruising-down-8bit-lane.mp3" type="audio/mp3">
+            </audio>
+        </div>
+
         <div id="game-intro" class="intro">
-            <img src="../img/eat-or-die-logo.png" alt="eat or die logo" class="eat-or-die-img" />
+            <img src="../resources/img/titles-instruction/eat-or-die-logo.png" alt="eat or die logo" class="eat-or-die-img" />
             <br />
-            <img src="../img/welcome.png" alt="welcome message" class="welcome-img" />
+            <img src="../resources/img/titles-instruction/welcome.png" alt="welcome message" class="welcome-img" />
             <br />
             <button type="button" id="start-button">
-                <img src="../img/lets-eat-button.png" alt="lets-eat-button"/>
+                <img src="../resources/img/buttons/lets-eat-button.png" alt="lets-eat-button"/>
             </button>
             <br />
-            <img src="../img/arrows.png" alt="arrow message" class="arrow-img" />
+            <img src="../resources/img/titles-instruction/arrows.png" alt="arrow message" class="arrow-img" />
             <br />
-            <img src="../img/keys.png" alt="keyboard arrows" class=“arrows-img” />
+            <img src="../resources/img/titles-instruction/keys.png" alt="keyboard arrows" class=“arrows-img” />
         </div>
 
         <!-- #game-intro is initially shown on the game start screen -->
@@ -66,16 +75,16 @@
 
         <!-- #game-end is initially hidden using CSS style display: none -->
         <div id="game-end" class="end">
-            <img src="../img/game-over.png" alt="end screen of game/game over" class="game-over-img" />
+            <img src="../resources/img/titles-instruction/game-over.png" alt="end screen of game/game over" class="game-over-img" />
             <br />
             <button type="button" id="restart-button">
-                <img src="../img/try-again.png" alt="try-again-button"/>
+                <img src="../resources/img/buttons/try-again.png" alt="try-again-button"/>
             </button>
         </div>
         </main>
 
         <audio id="collision-sound" preload="auto">
-            <source src="../sounds/sound-nom.mp3" type="audio/mp3">
+            <source src="../resources/sounds/sound-nom.mp3" type="audio/mp3">
         </audio>
 
         <script type="text/javascript" src="../js/food.js"></script>
@@ -84,3 +93,5 @@
         <script type="text/javascript" src="../js/script.js"></script>
     </body>
     </html>
+
+    <source src="../resources/img/nyan-cat.gif" type="audio/mp3">

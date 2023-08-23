@@ -9,7 +9,7 @@ class Game {
         250,
         200,
         100,
-        "../img/nyan-cat.gif"
+        "../resources/img/nyan-cat.gif"
       );
       this.height = 600;
       this.width = 900;

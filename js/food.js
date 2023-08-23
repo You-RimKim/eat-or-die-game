@@ -9,11 +9,11 @@ class Unhealthy {
     this.element = document.createElement("img");
 
     const unhealthyFoodImages = [
-      "../img/food/unhealthy/burger.png",
-      "../img/food/unhealthy/bacon.png",
-      "../img/food/unhealthy/cookie.png",
-      "../img/food/unhealthy/french_fries.png",
-      "../img/food/unhealthy/doughnut_pink_sprinkles.png"
+      "../resources/img/food/unhealthy/burger.png",
+      "../resources/img/food/unhealthy/pizza_pepperoni_slice.png",
+      "../resources/img/food/unhealthy/cookie.png",
+      "../resources/img/food/unhealthy/french_fries.png",
+      "../resources/img/food/unhealthy/doughnut_pink_sprinkles.png",
     ];
     
     const randomIndex = Math.floor(Math.random() * unhealthyFoodImages.length);
@@ -53,11 +53,11 @@ class Healthy {
       this.element = document.createElement("img");
 
       const healthyFoodImages = [
-        "../img/food/healthy/broccoli.png",
-        "../img/food/healthy/avocado_half.png",
-        "../img/food/healthy/kale.png",
-        "../img/food/healthy/chili_pepper_red.png",
-        "../img/food/healthy/persimmon.png"
+        "../resources/img/food/healthy/broccoli.png",
+        "../resources/img/food/healthy/avocado_half.png",
+        "../resources/img/food/healthy/kale.png",
+        "../resources/img/food/healthy/chili_pepper_red.png",
+        "../resources/img/food/healthy/persimmon.png"
       ];
   
       const randomIndex = Math.floor(Math.random() * healthyFoodImages.length);

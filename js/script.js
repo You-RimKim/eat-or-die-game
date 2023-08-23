@@ -1,3 +1,16 @@
+const music = document.getElementById("background-music");
+const icon = document.getElementById("audio-icon");
+
+icon.onclick = function() {
+  if(music.paused) {
+    music.play();
+    icon.src="../resources/img/buttons/audio-stop.png";
+  } else {
+    music.pause();
+    icon.src="../resources/img/buttons/audio-button.png";
+  }
+}
+
 window.onload = function () {
   //const welcomeButton = document.getElementById("eat-or-die-button");//
   const startButton = document.getElementById("start-button");

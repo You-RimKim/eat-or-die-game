@@ -51,7 +51,7 @@ body {
     padding: 20px 0px;
     overflow: hidden;
     position: relative;
-    background-image: url(../img/Glowing\ City.svg);
+    background-image: url(../resources/img/backgrounds/glowing-city.svg);
     background-size: cover;
     animation: slide 5s linear infinite;
     box-shadow: inset -10px -10px 10px 20px white;
@@ -71,6 +71,17 @@ body {
   
   #game-end {
     display: none;
+  }
+
+  .audio {
+    position: fixed;
+    top: 70px;
+    left: 180px;
+    z-index: 100;
+  }
+
+  .audio-icon {
+    width: 60%;
   }
   
   .video-background {
@@ -128,7 +139,7 @@ body {
   }
 
   .game-over-img {
-    width: 50%;
+    width: 20%;
   }
 
   button {
@@ -139,5 +150,5 @@ body {
   }
 
   button img {
-    max-width: 30%;
+    max-width: 25%;
   }
