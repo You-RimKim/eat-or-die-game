@@ -53,7 +53,14 @@ class Game {
         for (let i = 0; i < this.unhealthyFoods.length; i++) {
             const unhealthyFood = this.unhealthyFoods[i];
             unhealthyFood.move();
-            if (this.player.didCollide(unhealthyFood)) {
+            
+            if(this.height < this.unhealthyFoods[i].top) {
+              unhealthyFood.element.remove();
+                this.unhealthyFoods.splice(i, 1);
+            }
+            
+            
+            if (this.player.didCollideUnhealthy(unhealthyFood)) {
                 unhealthyFood.element.remove();
                 this.unhealthyFoods.splice(i, 1);
                 this.lives--;
@@ -65,7 +72,13 @@ class Game {
         for (let i = 0; i < this.healthyFoods.length; i++) {
             const healthyFood = this.healthyFoods[i];
             healthyFood.move();
-            if (this.player.didCollide(healthyFood)) {
+            
+            if(this.height < this.healthyFoods[i].top) {
+              healthyFood.element.remove();
+                this.healthyFoods.splice(i, 1);
+            }
+            
+            if (this.player.didCollideHealthy(healthyFood)) {
                 this.score++;
                 healthyFood.element.remove();
                 this.healthyFoods.splice(i, 1);

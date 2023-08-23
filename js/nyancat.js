@@ -43,7 +43,7 @@ class Player {
     this.updatePosition();
   }
 
-  didCollide(unhealthyFood) {
+  didCollideUnhealthy(unhealthyFood) {
     const playerRect = this.element.getBoundingClientRect();
     const unhealthyFoodRect = unhealthyFood.element.getBoundingClientRect();
 
@@ -54,15 +54,19 @@ class Player {
       playerRect.bottom > unhealthyFoodRect.top
     ) {
 
+      const collisionSound = document.getElementById("collision-sound");
+      collisionSound.play();
+
       return true;
     } else {
       return false;
     }
   }
 
-  didCollide(healthyFood) {
+  didCollideHealthy(healthyFood) {
     const playerRect = this.element.getBoundingClientRect();
     const healthyFoodRect = healthyFood.element.getBoundingClientRect();
+  
 
     if (
       playerRect.left < healthyFoodRect.right &&
@@ -70,10 +74,16 @@ class Player {
       playerRect.top < healthyFoodRect.bottom &&
       playerRect.bottom > healthyFoodRect.top
     ) {
+      
+      const collisionSound = document.getElementById("collision-sound");
+      collisionSound.play();
+
       return true;
+
     } else {
       return false;
     }
+
   }
 
   updatePosition() {
