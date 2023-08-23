@@ -11,8 +11,8 @@ class Game {
         100,
         "../img/nyan-cat.gif"
       );
-      this.height = 800;
-      this.width = 1500;
+      this.height = 600;
+      this.width = 900;
       this.unhealthyFoods = [];
       this.healthyFoods = [];
       this.score = 0;
@@ -94,55 +94,3 @@ class Game {
         this.gameEndScreen.style.display = "block";
     }
     }
-  
-    /*update() {
-      this.player.move();
-  
-      // Check for collision and if an obstacle is still on the screen
-      for (let i = 0; i < this.unhealthyFoods.length; i++) {
-        const unhealthyFood = this.unhealthyFoods[i];
-        unhealthyFood.move();
-  
-        // If the player's car collides with an obstacle
-        if (this.player.didCollide(unhealthyFood)) {
-          unhealthyFood.element.remove();
-          this.unhealthyFoods.splice(i, 1);
-          this.lives--;
-          i--;
-          this.livesElement.textContent = `${this.lives}`;
-        } // If the obstacle is off the screen (at the bottom)
-        else if (unhealthyFood.top > this.height) {
-          this.score++;
-          unhealthyFood.element.remove();
-          this.unhealthyFoods.splice(i, 1);
-          i--;
-          this.scoreElement.textContent = `${this.score}`;
-        }
-      }
-  
-      // If the lives are 0, end the game
-      if (this.lives === 0) {
-        this.endGame();
-      }
-  
-      // Create a new obstacle based on a random probability
-      // when there is no other obstacles on the screen
-      if (Math.random() > 0.98 && this.unhealthyFoods.length < 1) {
-        this.unhealthyFoods.push(new Unhealthy(this.gameScreen));
-      }
-    }
-  
-    // Create a new method responsible for ending the game
-    endGame() {
-      this.player.element.remove();
-      this.unhealthyFoods.forEach(function (unhealthyFood) {
-        unhealthyFood.element.remove();
-      });
-  
-      this.gameIsOver = true;
-      // Hide game screen
-      this.gameScreen.style.display = "none";
-      // Show end game screen
-      this.gameEndScreen.style.display = "block";
-    }
-  }*/

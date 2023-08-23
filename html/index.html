@@ -22,15 +22,22 @@
             <br />
             <img src="../img/welcome.png" alt="welcome message" class="welcome-img" />
             <br />
-            <button id="start-button">Let's eat!</button>
-            <p>Use the arrows to stuff your belly.</p>
+            <button type="button" id="start-button">
+                <img src="../img/lets-eat-button.png" alt="lets-eat-button"/>
+            </button>
+            <br />
+            <img src="../img/arrows.png" alt="arrow message" class="arrow-img" />
+            <br />
             <img src="../img/keys.png" alt="" class="arrows-img" />
         </div>
 
         <div id="game-container" class="gamescreen">
             <div>
+                <br />
                 <h2>SCORE: <span id="score">0</span></h2>
+                <br />
                 <h2>LIVES: <span id="lives">3</span></h2>
+                <br />
             </div>
             <!-- #game-screen is initially hidden using CSS style display: none -->
             <div id="game-screen"></div>
@@ -40,7 +47,9 @@
         <div id="game-end" class="end">
             <img src="../img/game-over.png" alt="end screen of game/game over" class="game-over-img" />
             <br />
-            <button id="restart-button">Try again</button>
+            <button type="button" id="restart-button">
+                <img src="../img/try-again.png" alt="try-again-button"/>
+            </button>
         </div>
         </main>
 

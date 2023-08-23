@@ -52,20 +52,21 @@ body {
     padding: 20px 0px;
     overflow: hidden;
     position: relative;
-    background-image: url();
+    background-image: url(../img/Glowing\ City.svg);
     background-size: cover;
     animation: slide 5s linear infinite;
+    box-shadow: inset -10px -10px 10px 20px white;
   }
   
   @keyframes slide {
     0% {
-      background-position: 0 -1000px;
+      background-position: 1000px 0;
     }
     95% {
       background-position: 0 0;
     }
     100% {
-      background-position: 0 50px;
+      background-position: -50px 0;
     }
   }
   
@@ -87,6 +88,7 @@ body {
   }*/
 
   .video-background {
+    display: flex;
     object-fit: fill;
     width: 100%;
     height: 100%;
@@ -105,6 +107,12 @@ body {
     justify-content: center;
   }
 
+  .starter {
+    position: relative;
+    align-items: center;
+    justify-content: center;
+  }
+
   .gamescreen {
     position: relative;
     align-items: center;
@@ -118,23 +126,40 @@ body {
   }
   
   .eat-or-die-img {
-    width: 50em;
+    width: 50%;
   }
 
   .welcome-img {
-    width: 20em;
+    width: 20%;
+  }
+
+  .arrow-img {
+    width: 20%;
   }
   
   .arrows-img {
-    width: 150px;
+    width: 10%;
   }
-  
-  body button {
-    font-size: 30px;
-    color: #870007;
-    padding: 20px 40px;
-    border: 0;
-    box-shadow: 0;
-    border-radius: 5px;
-    margin-bottom: 20px;
+
+  .score-img {
+    width: 10%;
+  }
+
+  .lives-img {
+    width: 10%;
+  }
+
+  .game-over-img {
+    width: 50%;
+  }
+
+  button {
+    border: none;
+    cursor: pointer;
+    appearance: none;
+    background-color: inherit;
+  }
+
+  button img {
+    width: 30%;
   }
