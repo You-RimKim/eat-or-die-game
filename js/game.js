@@ -23,16 +23,15 @@ class Game {
     }
   
     start() {
-      // Set the height and width of the game screen
+
       this.gameScreen.style.height = `${this.height}px`;
       this.gameScreen.style.width = `${this.width}px`;
   
-      // Hide the start screen
+
       this.startScreen.style.display = "none";
       // Show the game screen
       this.gameScreen.style.display = "block";
   
-      //
       this.gameLoop();
     }
   
@@ -70,16 +69,16 @@ class Game {
                 this.score++;
                 healthyFood.element.remove();
                 this.healthyFoods.splice(i, 1);
-                i++;
+                i--;
                 this.scoreElement.textContent = `${this.score}`;
             }
         }
             
             if (Math.random() > 0.5 && this.unhealthyFoods.length < 1) {
-                this.unhealthyFoods.push(new Unhealthy(this.gameScreen, "../img/food/unhealthy/burger.png"));
+                this.unhealthyFoods.push(new Unhealthy(this.gameScreen));
             }
             if (Math.random() > 0.5 && this.healthyFoods.length < 1) {
-                this.healthyFoods.push(new Healthy(this.gameScreen, "../img/food/healthy/broccoli.png"));
+                this.healthyFoods.push(new Healthy(this.gameScreen));
             }
 
             if (this.lives === 0) {

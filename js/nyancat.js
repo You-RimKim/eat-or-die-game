@@ -22,7 +22,7 @@ class Player {
   }
 
   move() {
-    // Update player's car position based on directionX and directionY
+
     this.left += this.directionX * this.speedX;
     this.top += this.directionY * this.speedY;
 
@@ -40,7 +40,6 @@ class Player {
       this.top = this.gameScreen.offsetHeight - this.height - 10;
     }
 
-    // Update the player's car position on the screen
     this.updatePosition();
   }
 
@@ -55,6 +54,22 @@ class Player {
       playerRect.bottom > unhealthyFoodRect.top
     ) {
 
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  didCollide(healthyFood) {
+    const playerRect = this.element.getBoundingClientRect();
+    const healthyFoodRect = healthyFood.element.getBoundingClientRect();
+
+    if (
+      playerRect.left < healthyFoodRect.right &&
+      playerRect.right > healthyFoodRect.left &&
+      playerRect.top < healthyFoodRect.bottom &&
+      playerRect.bottom > healthyFoodRect.top
+    ) {
       return true;
     } else {
       return false;

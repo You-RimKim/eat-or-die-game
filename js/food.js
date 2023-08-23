@@ -29,15 +29,15 @@ class Unhealthy {
   }
 
   updatePosition() {
-    // Update the obstacle's position based on the properties left and top
+    // Update the unhealthy food's position based on the properties left and top
     this.element.style.left = `${this.left}px`;
     this.element.style.top = `${this.top}px`;
   }
 
   move() {
-    // Move the obstacle down by 3px
+    // Move the unhealthy food down by 3px
     this.top += 3;
-    // Update the obstacle's position on the screen
+    // Update the unhealthy food's position on the screen
     this.updatePosition();
   }
 }
