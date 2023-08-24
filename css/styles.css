@@ -21,7 +21,6 @@ body {
     display: flex;
     width: 100vw;
     padding: 20px 0px;
-    display: flex;
     align-items: center;
     justify-content: center;
   }
@@ -117,11 +116,11 @@ body {
     width: 20%;
   }
 
-  .arrow-img {
-    width: 20%;
+  .belly-img {
+    width: 30%;
   }
   
-  .arrows-img {
+  .keyboard-img {
     width: 10%;
   }
 
