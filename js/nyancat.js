@@ -43,13 +43,13 @@ class Player {
     this.updatePosition();
   }
 
-  /*increaseSize() {
-    this.width += 10;
-    this.height += 10;
+  increaseSize() {
+    this.width += 20;
+    this.height += 20;
 
     this.element.style.width = `${this.width}px`;
     this.element.style.height = `${this.height}px`;
-  }*/
+  }
 
   didCollideUnhealthy(unhealthyFood) {
     const playerRect = this.element.getBoundingClientRect();
@@ -64,6 +64,8 @@ class Player {
 
       const collisionSound = document.getElementById("collision-sound");
       collisionSound.play();
+
+      this.increaseSize();
 
       return true;
     } else {
@@ -86,8 +88,9 @@ class Player {
       const collisionSound = document.getElementById("collision-sound");
       collisionSound.play();
 
-      return true;
+      this.increaseSize();
 
+      return true;
     } else {
       return false;
     }

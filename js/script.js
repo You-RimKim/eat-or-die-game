@@ -1,6 +1,6 @@
 const music = document.getElementById("background-music");
 const icon = document.getElementById("audio-icon");
-music.volume = 0.2;
+music.volume = 0.3;
 
 icon.onclick = function() {
   if(music.paused) {
@@ -13,14 +13,9 @@ icon.onclick = function() {
 }
 
 window.onload = function () {
-  //const welcomeButton = document.getElementById("eat-or-die-button");//
   const startButton = document.getElementById("start-button");
   const restartButton = document.getElementById("restart-button");
   let game;
-
-  /*welcomeButton.addEventListener("click", function () {
-    instructionPage();
-  })*/
 
   startButton.addEventListener("click", function () {
     startGame();
@@ -29,11 +24,6 @@ window.onload = function () {
   restartButton.addEventListener("click", function () {
     restartGame();
   });
-
-  /*function instructionPage() {
-    const instructionsElement = document.getElementById("game-instruction");
-    instructionsElement.style.display = "block";
-  }*/
 
   function startGame() {
     console.log("start game");

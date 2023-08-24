@@ -32,20 +32,13 @@ body {
     margin-right: 20px;
 }
 
-  #game-container span {
+  #game-container h2 {
     font-family: "Verdana", sans-serif;
     font-size: 15px;
     color: #fff;
     margin-bottom: 10px;
-    display: inline-block; /* To make sure the images and text are displayed inline */
 }
 
-/* Style for the score and lives span elements
-  #score, #lives {
-    font-weight: bold;
-    color:black;
-}*/
-  
   #game-screen {
     display: none;
     align-content: center;
@@ -77,7 +70,7 @@ body {
   .audio {
     position: fixed;
     top: 70px;
-    left: 180px;
+    left: 150px;
     z-index: 100;
   }
   
@@ -113,15 +106,12 @@ body {
   }
   
   .eat-or-die-img {
-    display: flex;
+    position: relative;
     justify-content: center;
     align-items: center;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     width: 50%;
   }
+
 
   .hungry-img {
     width: 20%;
