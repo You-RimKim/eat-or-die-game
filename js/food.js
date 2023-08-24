@@ -16,6 +16,8 @@ class Unhealthy {
       "../resources/img/food/unhealthy/doughnut_pink_sprinkles.png",
     ];
     
+    // selects random number of item in array
+    // rounded down to generate number to select nearest number (food)
     const randomIndex = Math.floor(Math.random() * unhealthyFoodImages.length);
     this.element.src = unhealthyFoodImages[randomIndex];
 

@@ -23,10 +23,16 @@ class Player {
 
   move() {
 
+    // left = horizontal position, directionX = horizontal movement
+    // -1 for left, 0 for no movement, and 1 for right
     this.left += this.directionX * this.speedX;
+    // top = vertical position, directionX = vertical movement
+    // -1 for upward, 0 for no movement, and 1 for downward
     this.top += this.directionY * this.speedY;
+    // codde calculates new position: left position + horizontal movement, top position + vertical movement
 
     // Ensure the player's car stays within the game screen
+   // if player is too far left, it stops it moving
     if (this.left < 10) {
       this.left = 10;
     }
@@ -52,15 +58,19 @@ class Player {
   }
 
   didCollideUnhealthy(unhealthyFood) {
+    //bounding rectangle, defining position and dimension of player
     const playerRect = this.element.getBoundingClientRect();
     const unhealthyFoodRect = unhealthyFood.element.getBoundingClientRect();
 
     if (
+      // Checks if the left side of the player's rectangle is to the left of the right side of the unhealthy food's rectangle.
       playerRect.left < unhealthyFoodRect.right &&
       playerRect.right > unhealthyFoodRect.left &&
       playerRect.top < unhealthyFoodRect.bottom &&
       playerRect.bottom > unhealthyFoodRect.top
     ) {
+
+      // conditions are true simultaneously, it means that the player's and unhealthy food's rectangles are intersecting / collision
 
       const collisionSound = document.getElementById("collision-sound");
       collisionSound.play();

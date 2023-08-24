@@ -5,14 +5,17 @@ class Game {
       this.gameEndScreen = document.getElementById("game-end");
       this.player = new Player(
         this.gameScreen,
+        // position and size of nyancat
         50,
         250,
         200,
         100,
         "../resources/img/nyan-cat.gif"
       );
+      // setting the size of gamescreen here
       this.height = 600;
       this.width = 900;
+      // putting in the foods
       this.unhealthyFoods = [];
       this.healthyFoods = [];
       this.score = 0;
@@ -44,22 +47,27 @@ class Game {
   
       this.update();
   
+      // moving background in gamescreen
       window.requestAnimationFrame(() => this.gameLoop());
     }
 
     update() {
         this.player.move();
 
+        // loops through unhealthy objects in array + moves them
+        // updates position of their position (top to bottom)
         for (let i = 0; i < this.unhealthyFoods.length; i++) {
             const unhealthyFood = this.unhealthyFoods[i];
             unhealthyFood.move();
             
+            // if top position of unhealthy food > height of game screen
+            // if yes: food is not visible anymore, so DOM is removed from array
             if(this.height < this.unhealthyFoods[i].top) {
               unhealthyFood.element.remove();
                 this.unhealthyFoods.splice(i, 1);
             }
             
-            
+            // collision: food is removed, player loses life + loop continues
             if (this.player.didCollideUnhealthy(unhealthyFood)) {
                 unhealthyFood.element.remove();
                 this.unhealthyFoods.splice(i, 1);
@@ -86,7 +94,8 @@ class Game {
                 this.scoreElement.textContent = `${this.score}`;
             }
         }
-            
+            // new unhealthy food at certain probability
+            // creates new object on screen, if no unhealthy foods is displayed
             if (Math.random() > 0.5 && this.unhealthyFoods.length < 1) {
                 this.unhealthyFoods.push(new Unhealthy(this.gameScreen));
             }
@@ -100,6 +109,7 @@ class Game {
     }
     endGame() {
         this.player.element.remove();
+        // iterates through unehalthy food + removes it
         this.unhealthyFoods.forEach(unhealthyFood => unhealthyFood.element.remove());
         this.gameIsOver = true;
         this.gameScreen.style.display = "none";

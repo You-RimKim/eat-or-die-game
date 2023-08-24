@@ -2,12 +2,13 @@ Eat or Die
 
 Click here to see deployed game
 
-*Description
+## Description
     Eat or Die is a single-player, browser-based pixel-game with the goal to incentivise the player to opt for healthy food options.
     In the game the player moves Nyancat and tries to collect food items which are dropping from top to bottom. If the player opts for healthier food (e.g. vegetables), the player's score will increase. If the player opts for unhealthier food (e.g. fast food), the player's life will decrease. Further, with every food consumption Nyancat's size will increase and it will get harder for the player to avoid unhealthier food options.
     If all lives are being used, the game ends and the player can try again.
 
-*MVP
+
+## MVP
     - The game starts with the welcome screen including instructions and a "Lets's eat!" (start game) button
     - Player has the option to play background music by clicking on the audio icon on the top left side
     - Player can move Nyancat in all directions with the arrow keys
@@ -21,7 +22,7 @@ Click here to see deployed game
     - On the game over screen the player has the opportunity to play again by clicking the button "Try again"
 
 
-*Backlog Functionalities
+## Backlog Functionalities
     - Future possible features:
         - Tracking of highscore
         - Extra welcome page redirecting to the instruction page
@@ -30,7 +31,7 @@ Click here to see deployed game
         - Merging classes Unhealthy() and Healthy() together and then differentiate
 
 
-*Used Technologies
+## Used Technologies
     - HTML
     - CSS
     - JavaScript
@@ -39,7 +40,8 @@ Click here to see deployed game
     - JS Audio() and JS Image()
     - Adobe Photoshop
 
-*Data structure
+
+## Data structure
     - script.js
         - icon.onclick();
         - window.onload();
@@ -110,12 +112,14 @@ Click here to see deployed game
         - move();
         - updatePosition();
 
-*States
+
+## States
     - Start Screen with Instruction
     - Game Screen
     - Game Over Screen
 
-*Ideal Task Order
+
+## Ideal Task Order
     - Wireframing and logic of game
     - Basic HTML & CSS skeleton
     - Researching resources (images, videos and audio)
@@ -123,13 +127,15 @@ Click here to see deployed game
     - Adding features (audio, increase of difficulty level, speed of food and Nyancat)
     - Finalising design elements in Photoshop
 
-Links
-Trello Link
+
+## Links
+    - Notion: https://www.notion.so/406729598c1142ce8c2a257abdfb5615?v=c158e99a6b4a4be1ad834891c255862c&pvs=4
 Slides Link
 Github repository Link
 Deployment Link
 
-*Resources used:
+
+## Resources used:
     - Video background: https://www.vecteezy.com/video/25457877-blurred-animation-smooth-a-colorful-marble-acrylic-seamless-pattern-water-texture-watercolor-marble-background
     - Nyancat GIF: https://gist.github.com/s-shivangi/7b54ec766cf446cafeb83882b590174d
     - Gamescreen background: https://opengameart.org/content/glowing-city-background
@@ -138,4 +144,3 @@ Deployment Link
         - https://thenounproject.com/icon/music-158799/
         - https://thenounproject.com/icon/nyan-cat-40726/
     - Background music: https://pixabay.com/music/video-games-cruising-down-8bit-lane-159615/
-    

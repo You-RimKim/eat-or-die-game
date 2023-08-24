@@ -1,9 +1,11 @@
 body {
+    /* Removes any padding around the content within the body*/
     padding: 0;
     text-align: center;
   }
   
   video {
+    /* block = making it into a block level element*/
     display: block;
     object-fit: fill;
     position: absolute;
@@ -14,19 +16,24 @@ body {
   }
 
   #game-intro {
+    /* Adds padding of 20px at the top and bottom of element and no padding horizontally*/
     padding: 20px 0px;
   }
   
   #game-container {
     display: flex;
+    /* Sets the width of element to 100% of the viewport width*/
     width: 100vw;
     padding: 20px 0px;
     align-items: center;
+    /* Centers the items horizontally within the #game-container flex container*/
     justify-content: center;
   }
 
+  /* div is direct child of container*/
   #game-container > div {
     flex-direction: column;
+    /* Centers the items vertically within the #game-container flex container*/
     align-items: center;
     margin-right: 20px;
 }
@@ -50,7 +57,12 @@ body {
     box-shadow: inset -10px -10px 10px 20px white;
   }
   
+  /* definition of a CSS animation named slide*/
   @keyframes slide {
+    
+    /* % define the animation behavior at different points in time*/
+    /* 0% starting at 0%*/
+    /* image is moving from 0-95, then starts again*/
     0% {
       background-position: 1000px 0;
     }
@@ -58,6 +70,7 @@ body {
       background-position: 0 0;
     }
     100% {
+      /* background image's position at this point to 50 pixels to the left (horizontally) and 0 pixels from the top (vertically)*/
       background-position: -50px 0;
     }
   }
@@ -142,7 +155,9 @@ body {
 
   button {
     border: none;
+    /* when hovering, cursor changes into hand*/
     cursor: pointer;
+    /* across browsers, styling is consistent */
     appearance: none;
     background-color: inherit;
   }
