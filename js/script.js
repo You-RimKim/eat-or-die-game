@@ -5,7 +5,7 @@ music.volume = 0.3;
 icon.onclick = function() {
   if(music.paused) {
     music.play();
-    icon.src="../resources/img/buttons/audio-stop.png";
+    icon.src="./resources/img/buttons/audio-stop.png";
   } else {
     music.pause();
     icon.src="../resources/img/buttons/audio-button.png";
