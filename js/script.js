@@ -8,7 +8,7 @@ icon.onclick = function() {
     icon.src="./resources/img/buttons/audio-stop.png";
   } else {
     music.pause();
-    icon.src="../resources/img/buttons/audio-button.png";
+    icon.src="./resources/img/buttons/audio-button.png";
   }
 }
 
