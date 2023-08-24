@@ -1,5 +1,6 @@
 const music = document.getElementById("background-music");
 const icon = document.getElementById("audio-icon");
+music.volume = 0.2;
 
 icon.onclick = function() {
   if(music.paused) {

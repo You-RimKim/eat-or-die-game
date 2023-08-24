@@ -43,6 +43,14 @@ class Player {
     this.updatePosition();
   }
 
+  /*increaseSize() {
+    this.width += 10;
+    this.height += 10;
+
+    this.element.style.width = `${this.width}px`;
+    this.element.style.height = `${this.height}px`;
+  }*/
+
   didCollideUnhealthy(unhealthyFood) {
     const playerRect = this.element.getBoundingClientRect();
     const unhealthyFoodRect = unhealthyFood.element.getBoundingClientRect();
