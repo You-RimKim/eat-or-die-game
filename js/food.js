@@ -9,11 +9,11 @@ class Unhealthy {
     this.element = document.createElement("img");
 
     const unhealthyFoodImages = [
-      "../resources/img/food/unhealthy/burger.png",
-      "../resources/img/food/unhealthy/pizza_pepperoni_slice.png",
-      "../resources/img/food/unhealthy/cookie.png",
-      "../resources/img/food/unhealthy/french_fries.png",
-      "../resources/img/food/unhealthy/doughnut_pink_sprinkles.png",
+      "./resources/img/food/unhealthy/burger.png",
+      "./resources/img/food/unhealthy/pizza_pepperoni_slice.png",
+      "./resources/img/food/unhealthy/cookie.png",
+      "./resources/img/food/unhealthy/french_fries.png",
+      "./resources/img/food/unhealthy/doughnut_pink_sprinkles.png",
     ];
     
     // selects random number of item in array
@@ -55,11 +55,11 @@ class Healthy {
       this.element = document.createElement("img");
 
       const healthyFoodImages = [
-        "../resources/img/food/healthy/broccoli.png",
-        "../resources/img/food/healthy/avocado_half.png",
-        "../resources/img/food/healthy/kale.png",
-        "../resources/img/food/healthy/chili_pepper_red.png",
-        "../resources/img/food/healthy/persimmon.png"
+        "./resources/img/food/healthy/broccoli.png",
+        "./resources/img/food/healthy/avocado_half.png",
+        "./resources/img/food/healthy/kale.png",
+        "./resources/img/food/healthy/chili_pepper_red.png",
+        "./resources/img/food/healthy/persimmon.png"
       ];
   
       const randomIndex = Math.floor(Math.random() * healthyFoodImages.length);

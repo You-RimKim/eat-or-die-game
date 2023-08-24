@@ -10,7 +10,7 @@ class Game {
         250,
         200,
         100,
-        "../resources/img/nyan-cat.gif"
+        "./resources/img/nyan-cat.gif"
       );
       // setting the size of gamescreen here
       this.height = 600;

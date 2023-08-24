@@ -51,7 +51,7 @@ body {
     padding: 20px 0px;
     overflow: hidden;
     position: relative;
-    background-image: url(../resources/img/backgrounds/glowing-city.svg);
+    background-image: url(.../resources/img/backgrounds/glowing-city.svg);
     background-size: cover;
     animation: slide 5s linear infinite;
     box-shadow: inset -10px -10px 10px 20px white;
