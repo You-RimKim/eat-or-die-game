@@ -33,12 +33,14 @@ class Player {
 
     // Ensure the player's car stays within the game screen
    // if player is too far left, it stops it moving
+   // in pixel
     if (this.left < 10) {
       this.left = 10;
     }
     if (this.top < 10) {
       this.top = 10;
     }
+    // checks if player's left position is greater than the width of the game screen - the player's width - 10 pixels.
     if (this.left > this.gameScreen.offsetWidth - this.width - 10) {
       this.left = this.gameScreen.offsetWidth - this.width - 10;
     }

@@ -51,7 +51,7 @@ body {
     padding: 20px 0px;
     overflow: hidden;
     position: relative;
-    background-image: url(.../resources/img/backgrounds/glowing-city.svg);
+    background-image: url(../resources/img/backgrounds/glowing-city.svg);
     background-size: cover;
     animation: slide 5s linear infinite;
     box-shadow: inset -10px -10px 10px 20px white;
@@ -60,8 +60,8 @@ body {
   /* definition of a CSS animation named slide*/
   @keyframes slide {
     
-    /* % define the animation behavior at different points in time*/
-    /* 0% starting at 0%*/
+    /* % define the animation behaviour at different points in time*/
+    /* 0% starting at */
     /* image is moving from 0-95, then starts again*/
     0% {
       background-position: 1000px 0;

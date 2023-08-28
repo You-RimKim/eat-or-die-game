@@ -95,7 +95,7 @@ class Game {
             }
         }
             // new unhealthy food at certain probability
-            // creates new object on screen, if no unhealthy foods is displayed
+            // creates new object on screen, if Math.random is greater than 0.5 and no food displayed
             if (Math.random() > 0.5 && this.unhealthyFoods.length < 1) {
                 this.unhealthyFoods.push(new Unhealthy(this.gameScreen));
             }
@@ -104,6 +104,8 @@ class Game {
             }
 
             if (this.lives === 0) {
+              const dyingSound = document.getElementById("dying-sound");
+                dyingSound.play();
                 this.endGame();
             }
     }

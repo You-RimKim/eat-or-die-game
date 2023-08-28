@@ -1,6 +1,6 @@
-Eat or Die
+Game: Eat or Die
 
-Click here to see deployed game
+https://you-rimkim.github.io/eat-or-die-game/
 
 ## Description
     Eat or Die is a single-player, browser-based pixel-game with the goal to incentivise the player to opt for healthy food options.
@@ -130,16 +130,18 @@ Click here to see deployed game
 
 ## Links
     - Notion: https://www.notion.so/406729598c1142ce8c2a257abdfb5615?v=c158e99a6b4a4be1ad834891c255862c&pvs=4
-Slides Link
-Github repository Link
-Deployment Link
+    - Slides: https://docs.google.com/presentation/d/12I70sQWfY3RChz71a0kl0b_NGFSRcwnqRtUBdpLm414/edit?usp=sharing
+    - GitHub Repository: https://github.com/You-RimKim/eat-or-die-game
+    - Deployment: https://you-rimkim.github.io/eat-or-die-game/
 
 
 ## Resources used:
     - Video background: https://www.vecteezy.com/video/25457877-blurred-animation-smooth-a-colorful-marble-acrylic-seamless-pattern-water-texture-watercolor-marble-background
     - Nyancat GIF: https://gist.github.com/s-shivangi/7b54ec766cf446cafeb83882b590174d
     - Gamescreen background: https://opengameart.org/content/glowing-city-background
-    - Sound effect: https://www.youtube.com/watch?v=9TwiaXA6abQ
+    - Sound effects:
+        - https://www.youtube.com/watch?v=9TwiaXA6abQ
+        - https://pixabay.com/sound-effects/angry-cat-meow-82091/
     - Sound Icons:
         - https://thenounproject.com/icon/music-158799/
         - https://thenounproject.com/icon/nyan-cat-40726/
