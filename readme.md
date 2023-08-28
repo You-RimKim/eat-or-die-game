@@ -1,6 +1,9 @@
 Game: Eat or Die
 
 https://you-rimkim.github.io/eat-or-die-game/
+// Deployment is still not working, unfortunately. 
+// Still trying to manage to make it work.
+//Everything works on local, though.
 
 ## Description
     Eat or Die is a single-player, browser-based pixel-game with the goal to incentivise the player to opt for healthy food options.
